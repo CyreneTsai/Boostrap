@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <title>BS5.3.0版型</title>
+
+</head>
+
+<body>
+
+    <div class="container-sm my-5">
+        <h1>外食行為調查</h1>
+        <h2>基本資料</h2>
+        <div class="input-group mb-2">
+            <span class="input-group-text">您的性別</span>
+            <div class="input-group-text">
+                <input class="form-check-input" id="userGender1" name="userGender" type="radio" value="生理男">
+                <label class="form-check-label" class="form-check-label pt-1 ps-1" for="userGender1">生理男</label>
+            </div>
+            <div class="input-group-text">
+                <input class="form-check-input" id="userGender0" name="userGender" type="radio" value="生理女">
+                <label class="form-check-label pt-1 ps-1" for="userGender0">生理女</label>
+            </div>
+        </div>
+
+        <div>
+            <div class="input-group mb-2">
+                <span class="input-group-text">您的年齡</span>
+
+                <select class="form-select" id="userAge">
+                    <option disabled selected value>請選擇.</option>
+                    <option value="1">15歲以下</option>
+                    <option value="2">15～20歲</option>
+                    <option value="3">21～25歲</option>
+                    <option value="4">26～30歲</option>
+                    <option value="5">31～35歲</option>
+                    <option value="6">36～40歲</option>
+                    <option value="7">41～45歲</option>
+                    <option value="8">46～50歲</option>
+                    <option value="9">51～55歲</option>
+                    <option value="10">56～60歲</option>
+                    <option value="11">61～65歲</option>
+                    <option value="12">65歲以上</option>
+                </select>
+
+            </div>
+        </div>
+        <div>
+            <div class="input-group mb-2">
+                <span class="input-group-text">您居住的區域</span>
+                <select class="form-select" id="userArea">
+                    <option disabled selected value>請選擇...</option>
+                    <option value="台北">台北</option>
+                    <option value="新北">新北</option>
+                    <option value="桃園">桃園</option>
+                    <option value="新竹">新竹</option>
+                    <option value="苗栗">苗栗</option>
+                    <option value="台中">台中</option>
+                    <option value="彰化">彰化</option>
+                    <option value="南投">南投</option>
+                    <option value="嘉義">嘉義</option>
+                    <option value="台南">台南</option>
+                    <option value="高雄">高雄</option>
+                    <option value="屏東">屏東</option>
+                    <option value="宜蘭">宜蘭</option>
+                    <option value="花蓮">花蓮</option>
+                    <option value="台東">台東</option>
+                </select>
+            </div>
+
+
+
+            <div>
+                <div id="userJobGroup" class="accordion">
+                    <div id="userJobMain">
+
+                        <div class="input-group mb-2 ">
+                            <span class="input-group-text  bg-warning border-warning col-2">您的職業類別</span>
+                            <div class="input-group-text ">
+                                <input class="form-check-input mt-0 me-2 collapsed" id="userJob1" name="userJob"
+                                    data-bs-toggle="collapse" data-bs-target="#userJobGroup1" type="radio" value="管理財經">
+                                <label class="form-check-label" for="userJob1">管理財經</label>
+                            </div>
+                            <div class="input-group-text"><input class="form-check-input" id="userJob2" name="userJob"
+                                    type="radio" value="行銷業務">
+                                <label class="form-check-label" for="userJob2">行銷業務</label>
+                            </div>
+                            <div class="input-group-text"><input class="form-check-input" id="userJob3" name="userJob"
+                                    type="radio" value="客服支援">
+                                <label class="form-check-label" for="userJob3">客服支援</label>
+                            </div>
+                            <div class="input-group-text"><input class="form-check-input" id="userJob4" name="userJob"
+                                    type="radio" value="製造工程">
+                                <label class="form-check-label" for="userJob4">製造工程</label>
+                            </div>
+                            <div class="input-group-text"><input class="form-check-input" id="userJob5" name="userJob"
+                                    type="radio" value="教育傳播">
+                                <label class="form-check-label" for="userJob5">教育傳播</label>
+                            </div>
+                            <div class="input-group-text"><input class="form-check-input" id="userJob6" name="userJob"
+                                    type="radio" value="其他專業">
+                                <label class="form-check-label" for="userJob6">其他專業</label>
+                            </div>
+
+                        </div>
+                        <div id="userJobGroup1" data-bs-parent="#userJobGroup" class="accordion-collapse collapse">
+                        </div>
+                        <div id="userJobGroup2" data-bs-parent="#userJobGroup" class="accordion-collapse collapse">
+                        </div>
+                        <div id="userJobGroup3" data-bs-parent="#userJobGroup" class="accordion-collapse collapse">
+                        </div>
+                        <div id="userJobGroup4" data-bs-parent="#userJobGroup" class="accordion-collapse collapse">
+                        </div>
+                        <div id="userJobGroup5" data-bs-parent="#userJobGroup" class="accordion-collapse collapse">
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div>
+                <div class="input-group mb-2">
+                    <span class="input-group-text">您從事管理財經類的</span>
+                    <div class="input-group-text">
+                        <input class="form-check-input" id="userJob1-1" name="userJob1" type="radio" value="行政總務">
+                        <label class="form-check-label" for="userJob1-1">行政總務</label>
+
+                    </div>
+                    <div class="input-group-text">
+                        <input class="form-check-input" id="userJob1-2" name="userJob1" type="radio" value="財會稅務">
+                        <label class="form-check-label" for="userJob1-2">財會稅務</label>
+
+                    </div>
+
+
+
+                    <div class="input-group-text">
+                        <input class="form-check-input" id="userJob1-3" name="userJob1" type="radio" value="金融專業">
+                        <label class="form-check-label" for="userJob1-3">金融專業</label>
+
+                    </div>
+
+
+
+                    <div class="input-group-text">
+                        <input class="form-check-input" id="userJob1-4" name="userJob1" type="radio" value="人力資源">
+                        <label class="form-check-label" for="userJob1-4">人力資源</label>
+
+                    </div>
+
+
+                    <div class="input-group-text">
+                        <input class="form-check-input" id="userJob1-5" name="userJob1" type="radio" value="經營募款">
+                        <label class="form-check-label" for="userJob1-5">經營募款</label>
+
+                    </div>
+
+
+                    <div class="input-group-text">
+                        <input class="form-check-input" id="userJob1-6" name="userJob1" type="radio" value="其他職位">
+                        <label class="form-check-label" for="userJob1-6">其他職位</label>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div>
+                <div class="input-group mb-2">
+                    <span class="input-group-text">您從事行銷業務類的</span>
+
+                    <div class="input-group-text">
+
+                        <input class="form-check-input" id="userJob2-1" name="userJob2" type="radio" value="業務銷售">
+                        <label class="form-check-label" for="userJob2-1">業務銷售</label>
+                    </div>
+
+                    <div class="input-group-text">
+
+                        <input class="form-check-input" id="userJob2-2" name="userJob2" type="radio" value="門市管理">
+                        <label class="form-check-label" for="userJob2-2">門市管理</label>
+                    </div>
+
+                    <div class="input-group-text">
+
+                        <input class="form-check-input" id="userJob2-3" name="userJob2" type="radio" value="行銷廣告">
+                        <label class="form-check-label" for="userJob2-3">行銷廣告</label>
+                    </div>
+
+                    <div class="input-group-text">
+
+                        <input class="form-check-input" id="userJob2-4" name="userJob2" type="radio" value="貿易船務">
+                        <label class="form-check-label" for="userJob2-4">貿易船務</label>
+                    </div>
+
+                    <div class="input-group-text">
+
+                        <input class="form-check-input" id="userJob2-5" name="userJob2" type="radio" value="產品企劃">
+                        <label class="form-check-label" for="userJob2-5">產品企劃</label>
+                    </div>
+
+                    <div class="input-group-text">
+
+                        <input class="form-check-input" id="userJob2-6" name="userJob2" type="radio" value="其他職位">
+                        <label class="form-check-label" for="userJob2-6">其他職位</label>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="input-group mb-2">
+                    <span class="input-group-text">您從事客服支援類的</span>
+                    <div class="input-group-text">
+                        <input class="form-check-input" id="userJob3-1" name="userJob3" type="radio" value="旅遊休閒">
+                        <label class="form-check-label" for="userJob3-1">旅遊休閒</label>
+                    </div>
+                    <div></div>
+                    <div class="input-group-text">
+                        <input class="form-check-input" id="userJob3-2" name="userJob2" type="radio" value="客戶服務">
+                        <label class="form-check-label" for="userJob3-2">客戶服務</label>
+                    </div>
+                    <div></div>
+                    <div class="input-group-text">
+                        <input class="form-check-input" id="userJob3-3" name="userJob2" type="radio" value="其他職位">
+                        <label class="form-check-label" for="userJob3-3">其他職位</label>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="input-group mb-2">
+                    <span class="input-group-text">您從事製造工程類的</span>
+                    <div class="input-group-text">
+                        <input class="form-check-input" id="userJob4-1" name="userJob4" type="radio" value="生產管理">
+                        <label class="form-check-label" for="userJob4-1">生產管理</label>
+                    </div>
+                    <div class="input-group-text">
+                        <input class="form-check-input" id="userJob4-2" name="userJob4" type="radio" value="軟體工程">
+                        <label class="form-check-label" for="userJob4-2">軟體工程</label>
+                    </div>
+                    <div class="input-group-text">
+                        <input class="form-check-input" id="userJob4-3" name="userJob4" type="radio" value="MIS 網管">
+                        <label class="form-check-label" for="userJob4-3">MIS 網管</label>
+                    </div>
+                    <div class="input-group-text">
+                        <input class="form-check-input" id="userJob4-4" name="userJob4" type="radio" value="工程研發">
+                        <label class="form-check-label" for="userJob4-4">工程研發</label>
+                    </div>
+                    <div class="input-group-text">
+                        <input class="form-check-input" id="userJob4-5" name="userJob4" type="radio" value="生技研發">
+                        <label class="form-check-label" for="userJob4-5">生技研發</label>
+                    </div>
+                    <div class="input-group-text">
+                        <input class="form-check-input" id="userJob4-6" name="userJob4" type="radio" value="其他職位">
+                        <label class="form-check-label" for="userJob4-6">其他職位</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-group mb-2">
+                <span class="input-group-text">您從事教育傳播類的</span>
+                <div class="input-group-text">
+                    <input id="userJob5-1" name="userJob5" type="radio" value="教育輔導">
+                    <label for="userJob5-1">教育輔導</label>
+                </div>
+                <div class="input-group-text">
+                    <input id="userJob5-2" name="userJob5" type="radio" value="藝術設計">
+                    <label for="userJob5-2">藝術設計</label>
+                </div>
+                <div class="input-group-text">
+                    <input id="userJob5-3" name="userJob5" type="radio" value="傳播藝術">
+                    <label for="userJob5-3">傳播藝術</label>
+                </div>
+                <div class="input-group-text">
+                    <input id="userJob5-4" name="userJob5" type="radio" value="文字編輯">
+                    <label for="userJob5-4">文字編輯</label>
+                </div>
+                <div class="input-group-text">
+                    <input id="userJob5-5" name="userJob5" type="radio" value="其他職位">
+                    <label for="userJob5-5">其他職位</label>
+                </div>
+            </div>
+
+            <h2>用餐行為</h2>
+            <div class="input-group mb-2">
+                <span class="input-group-text">您平均外食頻率為？</span>
+                <div class="input-group-text">
+                    <input id="takeoutFreq-1" name="takeoutFreq" type="radio" value="幾乎不外食">
+                    <label for="takeoutFreq-1">幾乎不外食</label>
+                </div>
+                <div class="input-group-text">
+                    <input id="takeoutFreq-2" name="takeoutFreq" type="radio" value="平均 1 餐">
+                    <label for="takeoutFreq-2">平均 1 餐</label>
+                </div>
+                <div class="input-group-text">
+                    <input id="takeoutFreq-3" name="takeoutFreq" type="radio" value="每天 2 餐">
+                    <label for="takeoutFreq-3">每天 2 餐</label>
+                </div>
+                <div class="input-group-text">
+                    <input id="takeoutFreq-4" name="takeoutFreq" type="radio" value="每天 3 餐以上">
+                    <label for="takeoutFreq-4">每天 3 餐以上</label>
+                </div>
+            </div>
+            <div class="input-group mb-2">
+                <span class="input-group-text">您平均一餐消費金額為？</span>
+
+
+                <input class="form-control" id="rangeValue" type="text" value="200" readonly>
+
+
+                <div class="input-group-text flex-fill">
+                    <input class="form-range" type="range" id="customRange1" min="50" max="2000" step="50" value="200">
+                </div>
+
+            </div>
+
+            <div class="input-group mb-2">
+                <span class="input-group-text">您平均外食頻率為？</span>
+                <div class="input-group-text">
+                    <input id="roles-1" name="roles" type="radio" value="主要召集人">
+                    <label for="roles-1">主要召集人</label>
+                </div>
+                <div class="input-group-text">
+                    <input id="roles-2" name="roles" type="radio" value="決定餐廳的人">
+                    <label for="roles-2">決定餐廳的人</label>
+                </div>
+                <div class="input-group-text">
+                    <input id="roles-3" name="roles" type="radio" value="意見附和者">
+                    <label for="roles-3">意見附和者</label>
+                </div>
+                <div class="input-group-text">
+                    <input id="roles-4" name="roles" type="radio" value="無意見者">
+                    <label for="roles-4">無意見者</label>
+                </div>
+                <div class="input-group-text">
+                    <input id="roles-5" name="roles" type="radio" value="不和他人吃飯">
+                    <label for="roles-5">不和他人吃飯</label>
+                </div>
+            </div>
+
+            <script src="./js/bootstrap.bundle.min.js"></script>
+
+            <!-- 寫JS -->
+            <script>
+                const range = document.querySelector("input[type=range]");
+                const rangeValue = document.querySelector("#rangeValue");
+                console.log(range);
+                console.log(rangeValue);
+
+                range.addEventListener("input", function () {
+                    // console.log(this.value);
+                    rangeValue.value = this.value;
+
+                });
+
+            </script>
+</body>
+
+</html>

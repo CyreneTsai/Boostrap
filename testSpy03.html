@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <style>
+        html,
+        body,
+        main {
+            height: 100%;
+        }
+
+        .area {
+            /* 寫不寫都行 */
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center center;
+        }
+
+        .area1 {
+            background-image: url(https://images.pexels.com/photos/1125979/pexels-photo-1125979.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+        }
+
+        .area2 {
+            background-image: url(https://images.pexels.com/photos/927396/pexels-photo-927396.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+        }
+
+        .area3 {
+            background-image: url(https://images.pexels.com/photos/3716928/pexels-photo-3716928.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+        }
+
+        .area4 {
+            background-image: url(https://images.pexels.com/photos/1832318/pexels-photo-1832318.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+        }
+
+        .area5 {
+            background-image: url(https://images.pexels.com/photos/3296581/pexels-photo-3296581.jpeg?auto=compress&cs=tinysrgb&w=300);
+        }
+    </style>
+    <title>Scroll spy3</title>
+</head>
+
+<body>
+    <nav class="list-group position-fixed top-50 end-0 translate-middle-y me-3">
+        <!-- position-fixed變成只剩文字的寬度 -->
+        <!-- a.list-group-item*5[href=#spy$]>{選項$} -->
+        <a href="#spy1" class="list-group-item">選項1</a>
+        <a href="#spy2" class="list-group-item">選項2</a>
+        <a href="#spy3" class="list-group-item">選項3</a>
+        <a href="#spy4" class="list-group-item">選項4</a>
+        <a href="#spy5" class="list-group-item">選項5</a>
+    </nav>
+    <main data-bs-spy="scroll" data-bg-target="#navbar" tabindex="0">
+        <!-- div*5#spy$.area.area$ -->
+        <div id="spy1" class="area area1">1</div>
+        <div id="spy2" class="area area2">2</div>
+        <div id="spy3" class="area area3"></div>
+        <div id="spy4" class="area area4"></div>
+        <div id="spy5" class="area area5"></div>
+    </main>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

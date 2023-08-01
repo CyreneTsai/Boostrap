@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- 加cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .inputArea1 input {
+            width: 200px;
+            transition: all 0.5s;
+        }
+
+        .inputArea1 input:focus {
+            width: 300px;
+        }
+
+        .nav-item-1:hover .dropdown-menu {
+            display: block;
+
+        }
+
+        header {
+            height: 250px;
+            background-image: url(./images/img1.jpeg);
+            background-size: cover;
+            background-position: 0 -80px;
+        }
+
+        .Cyrene.img-head {
+            width: 80px;
+            height: 80px;
+        }
+
+        aside .nav1 .active {
+            border-bottom: 3px solid #d82259;
+
+        }
+
+        aside.top50 {
+            top: 50px;
+        }
+
+        main {
+            min-height: 800px;
+        }
+    </style>
+    <title>Flicker</title>
+
+</head>
+
+<body>
+    <!-- 導覽列 -->
+    <!-- <nav></nav> -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top ">
+        <div class="container">
+            <a class="navbar-brand" href="#">Flickr</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <!-- <span class="navbar-toggler-icon"></span>  漢堡icon -->
+                <i class="fa-solid fa-ellipsis-vertical"></i> <!--自己取代新的圖 -->
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown nav-item-1"> <!--這個行為覆蓋他:滑鼠移過去可以就顯示toggle li-->
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-current="page"
+                            href="#">發掘</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">最近相片</a></li>
+                            <li><a class="dropdown-item" href="#">熱門相片</a></li>
+                            <li><a class="dropdown-item" href="#">活動</a></li>
+                            <li><a class="dropdown-item" href="#">公眾相片簿計劃</a></li>
+                            <li><a class="dropdown-item" href="#">Flickr博覽館</a></li>
+                            <li><a class="dropdown-item" href="#">世界地圖</a></li>
+                            <li><a class="dropdown-item" href="#">相機搜尋器</a></li>
+                            <li><a class="dropdown-item" href="#">Flick Blogr</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown  nav-item-1"> <!--這個行為覆蓋他:滑鼠移過去可以就顯示toggle li-->
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            印刷品
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">沖印店 </a></li>
+                            <li><a class="dropdown-item" href="#">印刷品和掛牆藝術 </a></li>
+                            <li><a class="dropdown-item" href="#">實體相簿</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">購買pro</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <div class="d-flex align-items-center inputArea1"> <!---->
+                        <i class="fa-solid fa-magnifying-glass position-absolute ms-2"></i> <!-- 放大鏡 -->
+                        <input class="form-control me-2 ps-4" type="search" placeholder="相片、人物和群組" aria-label="Search">
+                    </div>
+
+                    <a href="#" class="btn text-white ms-3 me-3"><i class="fa-solid fa-cloud-arrow-up fs-4"></i></a>
+                    <a href="#" class="btn  text-white me-3">登入</a>
+                    <button class="btn btn-primary " type="submit">註冊</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- BN -->
+    <!-- <header></header> -->
+    <header class=""> <!-- d-flex改成橫向的 / align-items-end 移到下面去-->
+        <div class="container-md d-flex align-items-end h-100  text-white">
+
+            <!-- 我是1-->
+            <div><img class="Cyrene img-head rounded-circle" src="https://randomuser.me/api/portraits/men/79.jpg"
+                    alt=""></div>
+
+
+            <!-- 我是2：me-md-auto 把3推過去最右邊-->
+            <div class="me-auto">
+                <div class="d-flex align-items-center">
+                    <div class="name me-2">Ben Tsai</div>
+                    <div class="btn btn-light btn-sm me-2">追蹤</div>
+                    <div class="btn btn-outline-light btn-sm border-2">...</div>
+                </div>
+
+                <div>笑着擔心等方面大型，接近是他，原料輕易。</div>
+            </div>
+
+            <div>
+                1,500張照片 追蹤人數1933
+            </div>
+
+
+
+            <!-- 我是3-->
+            <div>3</div>
+        </div>
+    </header>
+
+    <!-- 側列 -->
+    <!-- <aside></aside> -->
+    <aside class="border-bottom bg-light sticky-top top50">
+        <div class="container ">
+            <div class="nav nav1">
+                <a href="#" class="nav-link">關於</a>
+                <a href="#" class="nav-link">所有照片</a>
+                <a href="#" class="nav-link active">相簿</a>
+                <a href="#" class="nav-link">最愛</a>
+                <a href="#" class="nav-link">博覽館</a>
+                <a href="#" class="nav-link">群組</a>
+            </div>
+        </div>
+
+    </aside>
+
+    <!-- 主內容 -->
+    <main></main>
+    <!-- 下排內容 -->
+    <footer class="bg-black">
+        <div class="container">
+            <div class="nav justify-content-between border-bottom">
+                <a href="#" class="nav-link text-light">關於</a>
+                <a href="#" class="nav-link text-light">工作機會</a>
+                <a href="#" class="nav-link text-light">Blog</a>
+                <a href="#" class="nav-link text-light">開發人員</a>
+                <a href="#" class="nav-link text-light">指南</a>
+                <a href="#" class="nav-link text-light">服務中心</a>
+                <a href="#" class="nav-link text-light">檢舉濫用</a>
+                <a href="#" class="nav-link text-light">說明討論區</a>
+                <a href="#" class="nav-link text-light">繁體中文</a>
+
+            </div>
+            <div class="nav ">
+                <a href="#" class="nav-link text-light">隱私政策</a>
+                <a href="#" class="nav-link text-light">服務條款</a>
+                <a href="#" class="nav-link text-light me-auto">Cookies</a> <!--me-auto 把logo往後面推-->
+                <a href="#" class=" text-light nav-link"><i
+                        class="fa-brands fa-twitter"></i></a><!-- nav-link 特定樣式的=導航欄物件樣式-->
+                <a href="#" class=" text-light nav-link"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="#" class=" text-light nav-link"><i class="fa-brands fa-facebook"></i></a>
+
+            </div>
+
+
+        </div>
+    </footer>
+
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

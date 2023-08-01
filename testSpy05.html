@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <style>
+        html,
+        body,
+        main {
+            height: 100%;
+        }
+
+        .myList .list-group-item {
+            position: relative;
+            padding: 0;
+            margin: 0;
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+            border-radius: 50%;
+            border: none;
+            outline: none;
+            margin-bottom: 5px;
+            opacity: 0.5;
+        }
+
+        .myList .list-group-item:hover {
+            opacity: 1;
+        }
+
+        .myList .list-group-item:hover::after {
+            content: attr(option-text);
+            position: absolute;
+            left: -60px;
+            top: -2px;
+            width: 50px;
+            color: black;
+            background-color: #fff;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .myList .active {
+            background-color: #fff;
+            opacity: 1;
+        }
+
+        .area {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center center;
+        }
+
+        .area1 {
+            background-image: url(https://images.pexels.com/photos/9789955/pexels-photo-9789955.jpeg?auto=compress&cs=tinysrgb&w=1600);
+        }
+
+        .area2 {
+            background-image: url(https://images.pexels.com/photos/307008/pexels-photo-307008.jpeg?auto=compress&cs=tinysrgb&w=1600);
+        }
+
+        .area3 {
+            background-image: url(https://images.pexels.com/photos/390051/surfer-wave-sunset-the-indian-ocean-390051.jpeg?auto=compress&cs=tinysrgb&w=1600);
+        }
+
+        .area4 {
+            background-image: url(https://images.pexels.com/photos/1230302/pexels-photo-1230302.jpeg?auto=compress&cs=tinysrgb&w=1600);
+        }
+
+        .area5 {
+            background-image: url(https://images.pexels.com/photos/2404956/pexels-photo-2404956.jpeg?auto=compress&cs=tinysrgb&w=1600);
+        }
+    </style>
+    <title>scroll spy 4</title>
+</head>
+
+<body>
+    <nav class="list-group position-fixed top-50 end-0 translate-middle-y me-3 myList">
+        <a href="#spy1" class="list-group-item" n="1" option-text="選項1"></a>
+        <a href="#spy2" class="list-group-item" n="2" option-text="選項2"></a>
+        <a href="#spy3" class="list-group-item" n="3" option-text="選項3"></a>
+        <a href="#spy4" class="list-group-item" n="4" option-text="選項4"></a>
+        <a href="#spy5" class="list-group-item" n="5" option-text="選項5"></a>
+    </nav>
+    <main data-bs-spy="scroll" data-bs-target="#navbar" tabindex="0">
+        <div id="spy1" class="area area1"></div>
+        <div id="spy2" class="area area2"></div>
+        <div id="spy3" class="area area3"></div>
+        <div id="spy4" class="area area4"></div>
+        <div id="spy5" class="area area5"></div>
+    </main>
+    <div id="alertArea" class="position-fixed start-0 top-0">
+        <!-- <div id="alert${流水編號}" class="alert alert-primary" role="alert">
+            ${動態訊息}
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>'
+        </div> -->
+    </div>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script>
+        const scrollSpy = document.querySelector("[data-bs-spy=scroll]");
+        // console.log(scrollSpy);
+        scrollSpy.addEventListener("activate.bs.scrollspy", function (e) {
+            // console.log(e.relatedTarget.getAttribute("n"));
+            let n = e.relatedTarget.getAttribute("n");
+            showAlert(`你進入了第${n}區`);
+        });
+
+        let alertNum = 0;
+        let alertArea = document.querySelector("#alertArea");
+
+        function showAlert(msg) {
+            alertNum++;
+            let template = `<div id="alert${alertNum}" class="alert alert-primary" role="alert">
+            ${msg}
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>'
+        </div>`;
+            // console.log(msg);
+            let dom = document.createElement("div");
+            dom.innerHTML = template;
+            alertArea.append(dom.children[0]);
+            setTimeout(function (Num) {
+                const alert = bootstrap.Alert.getOrCreateInstance('#alert' + Num)
+                alert.close();
+                alert.dispose();
+
+            }, 2000, [alertNum]);  //結束計時    讓捲動的alert消失
+        }
+
+    </script>
+</body>
+
+</html>

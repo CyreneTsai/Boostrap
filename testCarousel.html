@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- 這是去複製的 font-awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        .h-150px {
+            height: 150px;
+        }
+
+        .mh-250px {
+            min-height: 250px;
+        }
+
+        .h-300px {
+            height: 300px;
+        }
+
+
+        .w-600px {
+            /* width: 600px;  因為我想要她跟著畫面縮放*/
+        }
+
+        .fz-12px {
+            font-size: 12px;
+        }
+
+        .fz-40px {
+            font-size: 40px;
+        }
+
+        /* 透明度 */
+        .op5 {
+            opacity: 0.5;
+        }
+
+        /* 手指游標 */
+        .cup {
+            cursor: pointer;
+        }
+
+        /* 我的card1，當滑鼠移上去時，img會....  */
+        .card1:hover img {
+            transform: scale(1.1);
+        }
+
+        /* 過場 */
+        .card1 img {
+            transition: all 2s;
+        }
+    </style>
+    <title>圖片輪播</title>
+
+</head>
+
+<body>
+    <div class="container-md pt-3">
+
+        <header>
+            <div id="slide1" class="carousel slide w-600px h-300px" data-bs-ride="carousel">
+                <!--  自己加的data-bs-ride="carousel   自動撥放-->
+
+                <!-- 做小縮圖 -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#slide1" data-bs-slide-to="0" class="position-relative active"
+                        aria-current="true" aria-label="Slide 1">
+                        <!-- position-relative 在block中的相對位置  小縮圖在bar下方-->
+                        <img class="w-100 position-absolute start-0 top-0" src="./images/img1.jpeg" alt="">
+                        <!-- position-absolute start-0 top-0  絕對位置 小縮圖在bar下方-->
+
+                    </button>
+                    <button type="button" data-bs-target="#slide1" data-bs-slide-to="1" class="position-relative active"
+                        aria-current="true" aria-label="Slide 2">
+                        <img class="w-100 position-absolute start-0 top-0" src="./images/img2.jpeg" alt="">
+
+                    </button>
+                    <button type="button" data-bs-target="#slide1" data-bs-slide-to="2" class="position-relative active"
+                        aria-current="true" aria-label="Slide 3">
+                        <img class="w-100 position-absolute start-0 top-0" src="./images/img3.jpeg" alt="">
+
+                    </button>
+                </div>
+
+
+                <div class="carousel-inner h-100">
+                    <div class="carousel-item h-100 active">
+                        <img class="w-100 h-100 object-fit-cover" src="./images/img1.jpeg" alt="">
+                        <div class="carousel-caption">
+                            授權到處軍事版權所有，在那裡瀏覽器禁止。
+                        </div>
+                    </div>
+                    <div class="carousel-item h-100">
+                        <img class="w-100 h-100 object-fit-cover" src="./images/img2.jpeg" alt="">
+                        <div class="carousel-caption">
+                            授權到處軍事版權所有，在那裡瀏覽器禁止。
+                        </div>
+                    </div>
+                    <div class="carousel-item h-100">
+                        <img class="w-100 h-100 object-fit-cover" src="./images/img3.jpeg" alt="">
+                        <div class="carousel-caption">
+                            授權到處軍事版權所有，在那裡瀏覽器禁止。
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="ctrl position-absolute top-50 start-0 translate-middle-y ms-2 cup" data-bs-target="#slide1"
+                    data-bs-slide="next">
+                    <!--data-bs-target="對象" data-bs-side="行為" -->
+                    <i class="fa-solid fa-arrow-left fz-40px text-white op5"></i>
+                </div>
+                <div class="ctrl position-absolute top-50 end-0 translate-middle-y me-2 cup" data-bs-target="#slide1"
+                    data-bs-slide="prev">
+                    <i class="fa-solid fa-arrow-right fz-40px text-white op5"></i>
+                </div>
+
+            </div>
+    </div>
+
+
+    <!-- 做小卡片 -->
+    </header>
+    <main>
+        <div class="container-md pt-3">
+            <div class="row g-2 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+
+                <!-- 第一張小卡 -->
+                <div class="col">
+                    <div class="card mh-250px card1 overflow-hidden">
+                        <!--card-img-top圓角 -->
+                        <img class="card-img-top h-150px object-fit-cover rounded-2" src="./images/img1.jpeg" alt="">
+                        <!--將卡片的線拿掉 -->
+                        <div class="card-header bg-white border-bottom-0 fz-12px ps-2 d-flex"> header-#hashtag
+                            <span class="badge text-bg-secondary">tag1</span>
+                            <span class="badge text-bg-secondary me-auto ms-1">tag2</span>
+                            <i class="fa-solid fa-tag fs-6 " data-bs-toggle="tooltip" data-bs-title="查看更多標籤"></i>
+
+                        </div>
+
+                        <div class="card-body">
+                            <a class="text-black text-decoration-none stretched-link"
+                                href="#">body-content：普通宣傳飛機都有下載監管，姑娘沒事，動。</a>
+
+
+
+                        </div>
+
+                        <div class="card-footer bg-white border-top-0 fz-12px d-flex align-items-center ps-2">
+
+                            <span class="me-auto">footer： 2023-7-25 </span>
+                            <i class="fa-regular fa-bookmark" data-bs-toggle="tooltip" data-bs-title="收藏文章"></i>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- 第二張小卡 -->
+                <div class="col">
+                    <div class="card mh-250px card1 overflow-hidden">
+                        <!--card-img-top圓角 -->
+                        <img class="card-img-top h-150px object-fit-cover rounded-2" src="./images/img1.jpeg" alt="">
+                        <!--將卡片的線拿掉 -->
+                        <div class="card-header bg-white border-bottom-0 fz-12px ps-2 d-flex"> header-#hashtag
+                            <span class="badge text-bg-secondary">tag1</span>
+                            <span class="badge text-bg-secondary me-auto ms-1">tag2</span>
+                            <i class="fa-solid fa-tag fs-6 " data-bs-toggle="tooltip" data-bs-title="查看更多標籤"></i>
+
+                        </div>
+
+                        <div class="card-body">
+                            <a class="text-black text-decoration-none stretched-link"
+                                href="#">body-content：普通宣傳飛機都有下載監管，姑娘沒事，動。</a>
+
+                        </div>
+
+                        <div class="card-footer bg-white border-top-0 fz-12px d-flex align-items-center ps-2">
+
+                            <span class="me-auto">footer： 2023-7-25 </span>
+                            <i class="fa-regular fa-bookmark" data-bs-toggle="tooltip" data-bs-title="收藏文章"></i>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- 第三張小卡 -->
+                <div class="col">
+                    <div class="card mh-250px card1 overflow-hidden">
+                        <!--card-img-top圓角 -->
+                        <img class="card-img-top h-150px object-fit-cover rounded-2" src="./images/img1.jpeg" alt="">
+                        <!--將卡片的線拿掉 -->
+                        <div class="card-header bg-white border-bottom-0 fz-12px ps-2 d-flex"> header-#hashtag
+                            <span class="badge text-bg-secondary">tag1</span>
+                            <span class="badge text-bg-secondary me-auto ms-1">tag2</span>
+                            <i class="fa-solid fa-tag fs-6 " data-bs-toggle="tooltip" data-bs-title="查看更多標籤"></i>
+
+                        </div>
+
+                        <div class="card-body">
+                            <a class="text-black text-decoration-none stretched-link"
+                                href="#">body-content：普通宣傳飛機都有下載監管，姑娘沒事，動。</a>
+
+                        </div>
+
+                        <div class="card-footer bg-white border-top-0 fz-12px d-flex align-items-center ps-2">
+
+                            <span class="me-auto">footer： 2023-7-25 </span>
+                            <i class="fa-regular fa-bookmark" data-bs-toggle="tooltip" data-bs-title="收藏文章"></i>
+
+                        </div>
+
+                    </div>
+                </div>
+                <!-- 第四張小卡 -->
+                <div class="col">
+                    <div class="card mh-250px"></div>
+                </div>
+                <!-- 第五張小卡 -->
+                <div class="col">
+                    <div class="card mh-250px"></div>
+                </div>
+                <!-- 第六張小卡 -->
+                <div class="col">
+                    <div class="card mh-250px"></div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    </script>
+
+</body>
+
+</html>

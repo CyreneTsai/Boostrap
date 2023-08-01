@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .row {
+            height: 240px;
+            background-color: #f4f5ac;
+            /* display: block;   原本是這樣子橫的*/
+            display: flex;
+            /* or display: inline-block; */
+
+            align-items: flex-end;
+            /*將row靠在最下邊 */
+
+            /* 將間隔加在容器的內距 */
+            padding-left: 10px;
+            padding-right: 10px;
+
+
+        }
+
+        .col1 {
+            width: 50px;
+            height: 90px;
+            background-color: #f0cd98;
+            /* df */
+            /* jcc */
+            /* aic */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            margin-right: auto;
+
+
+        }
+
+        .col2 {
+            width: 50px;
+            height: 120px;
+            background-color: #9fb7eb;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            /* 將間隔加在容器的外距 */
+            margin-right: 10px;
+        }
+
+        .col3 {
+            width: 50px;
+            height: 60px;
+            background-color: #ee9484;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+    <title>Flex 排版- CSS版本 </title> <!-- 方法一：我們寫純CSS -->
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col col1">1</div>
+            <div class="col col2">2</div>
+            <div class="col col3">3</div>
+        </div>
+    </div>
+
+</body>
+
+</html>

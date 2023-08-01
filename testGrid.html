@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        .box {
+            background-color: #91dba3;
+            height: 100px;
+            margin-bottom: 10px;
+            /*mg10 (margin：div & div 之間的距離：外距)*/
+        }
+
+        .box2 {
+            background-color: #dba7a7;
+        }
+
+        .box3 {
+            margin-bottom: initial;
+        }
+    </style>
+    <title>測試欄位</title>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-2">
+            <div class="col">
+                <div class="box box3">
+                    <!-- 水平3欄 -->
+                    <div class="row g-0 h-100">
+                        <div class="col">
+                            <div class="bg-secondary-subtle h-100">1-1</div>
+                        </div>
+                        <div class="col">
+                            <div class="bg-warning-subtle h-100">1-1</div>
+                        </div>
+                        <div class="col">
+                            <div class="bg-primary-subtle h-100">1-1</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="box box3">
+                    <!-- 垂直3欄 -->
+                    <!-- div*3>{2-$} -->
+                    <div>2-1</div>
+                    <div>2-2</div>
+                    <div>2-3</div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="box box3">3</div>
+            </div>
+            <div class="col">
+                <div class="box box3">4</div>
+            </div>
+            <div class="col">
+                <div class="box box3">5</div>
+            </div>
+            <div class="col">
+                <div class="box box3">6</div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- col-489366 -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+                <div class="box box2"></div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-8">
+                <div class="box box2"></div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-9">
+                <div class="box box2"></div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="box box2"></div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-6">
+                <div class="box box2"></div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-6">
+                <div class="box box2"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- col-447552 -->
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <div class="box">1</div>
+            </div>
+            <div class="col-4">
+                <div class="box">2</div>
+            </div>
+            <div class="col-7">
+                <div class="box">3</div>
+            </div>
+            <div class="col-5">
+                <div class="box">4</div>
+            </div>
+            <div class="col-5">
+                <div class="box">5</div>
+            </div>
+            <div class="col-2">
+                <div class="box">6</div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 不等寬 -->
+    <div class="container h-100">
+        <div class="row h-100">
+            <div class="col-3">
+                <div class="bg-warning h-100"></div>
+            </div>
+            <div class="col-9">
+                <div class="bg-warning h-100"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- .container>.row>.col*12 -->
+    <!-- .container>.row>.col*12>.bg-danger.h-100 -->
+    <!-- .container.h-100>.row.h-100>.col*12>.bg-danger.h-100 -->
+
+
+    <!-- 等寬 -->
+    <!-- .container.h-100>.row.h-100>.col-4*3>.bg-primary.h-100 -->
+    <div class="container h-100">
+        <div class="row h-100">
+            <div class="col-4">
+                <div class="bg-primary h-100"></div>
+            </div>
+            <div class="col-4">
+                <div class="bg-primary h-100"></div>
+            </div>
+            <div class="col-4">
+                <div class="bg-primary h-100"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

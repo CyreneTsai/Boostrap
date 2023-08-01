@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <title>BS表單測試元素</title>
+
+</head>
+
+<body>
+    <div class="container-sm mt-3">
+
+        <div class="mb-3">
+            <label class="form-control" for="inputName">name</label>
+            <input class="form-control" id="inpurName" type="text">
+
+            <div class="mb-3">
+                <input type="color" class="form-control form-control-color"> 預設顏色樣式
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <input type="file" class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <div class="row g-0">
+                <div class="col-auto">
+                    <label class="btn btn-info text-white rounded-end-0" for="myFile">按我選擇檔案</label>
+
+                </div>
+                <div class="col">
+                    <input class="form-control border-info rounded-start-0 " id="myFileInfo" type="text"
+                        placeholder="選了後會出現檔案名稱">
+                </div>
+
+                <div>
+                    <input class="d-none" id="myFile" type="file">
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="mb-3">
+            <label class="form-label" for="">你居住的區域</label>
+            <select class="form-select" name="" id="">
+                <option value disable selected>請選擇</option>
+                <option value="">台南</option>
+                <option value="">台北</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <input class="form-check-input" name="gender" id="g1" type="radio">
+            <label class="form-check-label" for="g1">男</label>
+            <input class="form-check-input" name="gender" id="g2" type="radio">
+            <label class="form-check-label" for="g2">女</label>
+        </div>
+
+        <div class="mb-3">
+            <input class="form-check-input" name="gender2" id="g1" type="checkbox">
+            <label class="form-check-label" for="g1">男</label>
+            <input class="form-check-input" name="gender2" id="g2" type="checkbox">
+            <label class="form-check-label" for="g2">女</label>
+        </div>
+
+        <div class="mb-2 form-check form-switch">
+            <input type="checkbox" class="form-check-input" role="siwtch"></input>
+        </div>
+
+
+
+    </div>
+
+    </div>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+
+    <!-- 開始寫JS -->
+    <script>
+        const myFileInfo = document.querySelector("myFileInfo");
+        const myFile = document.querySelector("#myFile");
+        myFile.addEventListener("change", function () {
+            let file = this.files[0].name;
+            // console.log(file);
+            myFileInfo.value = file;
+
+        });
+
+
+    </script>
+</body>
+
+</html>
